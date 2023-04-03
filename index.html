@@ -14,35 +14,20 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-12">
-                <h2>Gráfica de datos</h2>
+                <h2 class="text-center">Número de casos por departamento</h2>
                 <canvas id="myChart" width="400" height="250"></canvas>
             </div>
             <div class="col-md-12">
-                <h2>Tabla de datos</h2>
+                <h2 class="text-center mt-5">Tabla de datos</h2>
                 <table class="table table-striped">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center">
                         <tr>
                             <th>#</th>
-                            <th>First</th>
-                            <th>Last</th>
+                            <th>Departamento</th>
+                            <th>No. Casos</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                    <tbody id="tbCasos" class="text-center">
                     </tbody>
                 </table>
             </div>
