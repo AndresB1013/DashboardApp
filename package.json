@@ -1,0 +1,21 @@
+{
+  "name": "dashboardapp",
+  "version": "1.0.0",
+  "description": "This repository contain a started project with HTML5, CSS & JS.",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresB1013/DashboardApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresB1013/DashboardApp/issues"
+  },
+  "homepage": "https://github.com/AndresB1013/DashboardApp#readme"
+}

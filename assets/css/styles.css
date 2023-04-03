@@ -2,6 +2,98 @@
     font-family: 'Roboto', sans-serif;
 }
 
+header{
+    background-color: darkblue;
+    color: white;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+h1{
+    margin: 20px;
+}
+
+.btn-secondary{
+    display: flex;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+}
+
+.titulos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
 .text-blue {
     color: #007bff;
+}
+
+footer{
+    margin-top: auto;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+.redes-sociales ul{
+    position: relative;
+    display: flex;
+}
+
+.redes-sociales ul li{
+    list-style: none;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.redes-sociales ul li .fab{
+    font-size: 20px;
+    transition: .3s;
+    line-height: 30px;
+    color: black;
+    text-align: center;
+}
+
+.redes-sociales ul li .fab:hover{
+    color:#fff;
+}
+
+.redes-sociales ul li a{
+    position:relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(245, 243, 243);
+    text-align: center;
+    transition: .6s;
+}
+
+.redes-sociales ul li a:hover{
+    transform: translate(0,-15%);
+}
+
+.redes-sociales ul li:nth-child(1) a:hover{
+    background-color: rgb(44, 117, 221);
+}
+.redes-sociales ul li:nth-child(2) a:hover{
+    background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%);
+}
+.redes-sociales ul li:nth-child(3) a:hover{
+    background-color: rgb(18, 140, 102);
+}
+.redes-sociales ul li:nth-child(4) a:hover{
+    background-color: rgb(0,0,0);
+}
+
+footer h3{
+    font-style: oblique;
+    font-size: 20px;
 }
