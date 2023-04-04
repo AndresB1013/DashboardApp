@@ -1,4 +1,4 @@
-# Boilerplate-pure-html-css-js
+DASHBORAD_CORONAVIRUS_COLOMBIA
 
 La información utilizada en el proyecto proviene de datos.gov.co, página abierta para obtener dato del Gobierno de Colombia.
 
