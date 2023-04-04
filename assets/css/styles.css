@@ -21,6 +21,7 @@ h1{
     align-items: center;
     height: max-content;
     width: max-content;
+    margin: 15px;
 }
 
 .titulos{
@@ -97,3 +98,16 @@ footer h3{
     font-style: oblique;
     font-size: 20px;
 }
+
+
+@media screen and (max-width: 800px) {
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    height: fit-content;
+}
+    }

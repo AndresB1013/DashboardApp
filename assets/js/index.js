@@ -73,7 +73,7 @@ import { tablaDatos } from './tablaDatos.js';
             const datos = graficar(tipoContagio);
 
             let labels_for_pie = datos.data.map((item) => {
-                return item.contagio;
+                return item.criterio;
             });
 
             let data_for_pie = datos.data.map((item) => {
