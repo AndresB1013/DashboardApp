@@ -19,7 +19,6 @@ import { tablaDatos } from './tablaDatos.js';
         loadTheme();
         const getData = async ()=>{
             try{
-                
                 const result = await new Promise((resolve)=>{
                     setTimeout(()=>{
                         const datos = leerDatosApi(baseUrl);
@@ -27,7 +26,11 @@ import { tablaDatos } from './tablaDatos.js';
                         CargaDatos.innerHTML='';
                     }
                     ,5000)
-                    CargaDatos.innerHTML='<h2 class="text-center" >Cargando Datos...</h2>';
+                    CargaDatos.innerHTML=
+                    `
+                    <h2 class="text-center" >Por favor espere</h2>
+                    <div class="row-mt-3 custom-loader">
+                    </div>`;
                 })
                 return result
             }
