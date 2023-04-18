@@ -7,6 +7,7 @@ import { tablaDatos } from './tablaDatos.js';
 
 (() => {
     const baseUrl = 'https://www.datos.gov.co/resource/gt2j-8ykr.json';
+    const CargaDatos = document.getElementById('CargaDatos');
     const myChart = document.getElementById('myChart').getContext('2d');
     const myPie = document.getElementById('myPie').getContext('2d');
     const tbCasos = document.getElementById('tbCasos');
@@ -16,7 +17,26 @@ import { tablaDatos } from './tablaDatos.js';
 
     const loadData = (() => {
         loadTheme();
-        leerDatosApi(baseUrl).then(data =>{
+        const getData = async ()=>{
+            try{
+                
+                const result = await new Promise((resolve)=>{
+                    setTimeout(()=>{
+                        const datos = leerDatosApi(baseUrl);
+                        resolve(datos)
+                        CargaDatos.innerHTML='';
+                    }
+                    ,5000)
+                    CargaDatos.innerHTML='<h2 class="text-center" >Cargando Datos...</h2>';
+                })
+                return result
+            }
+            catch(error){
+                console.error(error)
+            }
+        }
+
+        getData().then(data =>{
             const totalPersonasPorDepartamento = data.reduce((acumulador, item) => {
                 const criterio = item.departamento_nom;
                 if (!acumulador[criterio]) {
@@ -103,8 +123,10 @@ import { tablaDatos } from './tablaDatos.js';
             })
 
             tablaDatos(tbContagios,datos)
-        });
+            console.log("Uyy! Algo salio mal")
+        })
     })
+
     fechaReporte.innerText = "03/04/2021";
 
     function loadTheme() {
